@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:03:26 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.oracle.xml.Emp" optimistic-lock="version" polymorphism="implicit" schema="SCOTT" select-before-update="false" table="EMP">
+        <id name="empno" type="short">
+            <column name="EMPNO" precision="4" scale="0"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="net.codejava.oracle.xml.Dept" embed-xml="true" fetch="select" insert="true" name="dept" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="DEPTNO" precision="2" scale="0"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="ename" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="ENAME"/>
+        </property>
+        <property generated="never" lazy="false" name="job" optimistic-lock="true" type="string" unique="false">
+            <column length="9" name="JOB"/>
+        </property>
+        <property generated="never" lazy="false" name="mgr" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="MGR" precision="4" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="hiredate" optimistic-lock="true" type="date" unique="false">
+            <column length="7" name="HIREDATE"/>
+        </property>
+        <property generated="never" lazy="false" name="sal" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="SAL" precision="7"/>
+        </property>
+        <property generated="never" lazy="false" name="comm" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="COMM" precision="7"/>
+        </property>
+    </class>
+</hibernate-mapping>

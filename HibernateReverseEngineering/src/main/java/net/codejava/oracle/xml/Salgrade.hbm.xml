@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:03:26 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.oracle.xml.Salgrade" optimistic-lock="version" polymorphism="implicit" schema="SCOTT" select-before-update="false" table="SALGRADE">
+        <composite-id class="net.codejava.oracle.xml.SalgradeId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="grade" type="big_decimal">
+                <column name="GRADE" precision="22" scale="0"/>
+            </key-property>
+            <key-property name="losal" type="big_decimal">
+                <column name="LOSAL" precision="22" scale="0"/>
+            </key-property>
+            <key-property name="hisal" type="big_decimal">
+                <column name="HISAL" precision="22" scale="0"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

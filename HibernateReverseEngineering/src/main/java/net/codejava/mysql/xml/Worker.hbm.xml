@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:01:40 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="db_hibernate_demo" dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.mysql.xml.Worker" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="worker">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column name="NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="monthlyPay" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="MONTHLY_PAY"/>
+        </property>
+        <property generated="never" lazy="false" name="yearlyPay" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="YEARLY_PAY"/>
+        </property>
+        <property generated="never" lazy="false" name="vocationWithPay" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="VOCATION_WITH_PAY"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:01:40 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="db_hibernate_demo" dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.mysql.xml.News" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="news">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="title" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="TITLE" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="author" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="AUTHOR"/>
+        </property>
+        <property generated="never" lazy="false" name="date" optimistic-lock="true" type="time" unique="false">
+            <column length="8" name="DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="content" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="CONTENT"/>
+        </property>
+        <property generated="never" lazy="false" name="image" optimistic-lock="true" type="binary" unique="false">
+            <column name="IMAGE"/>
+        </property>
+    </class>
+</hibernate-mapping>

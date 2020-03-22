@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:03:26 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.oracle.xml.Bonus" optimistic-lock="version" polymorphism="implicit" schema="SCOTT" select-before-update="false" table="BONUS">
+        <composite-id class="net.codejava.oracle.xml.BonusId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="ename" type="string">
+                <column length="10" name="ENAME"/>
+            </key-property>
+            <key-property name="job" type="string">
+                <column length="9" name="JOB"/>
+            </key-property>
+            <key-property name="sal" type="big_decimal">
+                <column name="SAL" precision="22" scale="0"/>
+            </key-property>
+            <key-property name="comm" type="big_decimal">
+                <column name="COMM" precision="22" scale="0"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

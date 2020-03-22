@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2020-3-22 12:01:40 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="db_hibernate_demo" dynamic-insert="false" dynamic-update="false" mutable="true" name="net.codejava.mysql.xml.Orders" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="orders">
+        <id name="orderId" type="java.lang.Integer">
+            <column name="ORDER_ID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="net.codejava.mysql.xml.Customers" embed-xml="true" fetch="select" insert="true" name="customers" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="CUSTOMER_ID"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="orderName" optimistic-lock="true" type="string" unique="false">
+            <column name="ORDER_NAME"/>
+        </property>
+    </class>
+</hibernate-mapping>
